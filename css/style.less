@@ -1,2 +1,123 @@
 @import url(normalize.css);
 
+@font-face {
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: normal;
+src: local('Open Sans'), url('../fonts/open-sans/OpenSans-Regular.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Open Sans Light';
+font-style: normal;
+font-weight: normal;
+src: local('Open Sans Light'), url('../fonts/open-sans/OpenSans-Light.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Open Sans Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Open Sans Italic'), url('../fonts/open-sans/OpenSans-Italic.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Open Sans Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Open Sans Bold'), url('../fonts/open-sans/OpenSans-Bold.woff') format('woff');
+}
+
+.openSans{
+	font-family: 'Open Sans', Arial, serif;
+	font-weight: 300;
+}
+
+.openSansBold{
+	font-family: 'Open Sans Bold', Arial, serif;
+	font-weight: 600;
+}
+
+.openSansItalic{
+	font-family: 'Open Sans Italic', Arial, serif;
+	font-weight: 300;
+	font-style: italic;
+}
+
+.openSansLight{
+	font-family: 'Open Sans Light', Arial, serif;
+	font-weight: 100;
+}
+
+@main-back: #2598d4;
+@main-blue: #0c9aec;
+@black: #1e2123;
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	font-size: 62.5%;
+	font-family: 'Open Sans', serif;
+	background-color: @main-back; //временный фон
+}
+
+body{
+	padding: 1rem;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+
+// Шапка сайта
+header{
+	position: relative;
+	padding: 3rem;
+	color: white;
+
+	h1{
+		display: inline-block;
+		position: absolute;
+    	top: 3.8rem;
+    	left: 13rem;
+		margin: 0;
+		.openSansLight;
+		font-size: 2.7rem;
+		text-transform: uppercase;
+
+		span{
+			.openSansBold;
+			font-weight: 900;
+		}
+	}
+
+	ul{
+		display: block;
+		position: absolute;
+		right: 3rem;
+		top: 5rem;
+		text-transform: uppercase;
+		.openSansBold;
+		font-size: 1.5rem;
+
+		li{
+			display: inline-block;
+			list-style-type: none;
+			margin: 0 1.5rem;
+			transition: 1s;
+
+			&:hover, &:active{
+				color: @black;
+			}
+
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+}
