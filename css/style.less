@@ -38,6 +38,11 @@ src: local('Open Sans Bold'), url('../fonts/open-sans/OpenSans-Bold.woff') forma
 	font-weight: 600;
 }
 
+.openSansExtraB{
+	font-family: 'Open Sans Bold', Arial, serif;
+	font-weight: 900;
+}
+
 .openSansItalic{
 	font-family: 'Open Sans Italic', Arial, serif;
 	font-weight: 300;
@@ -49,19 +54,20 @@ src: local('Open Sans Bold'), url('../fonts/open-sans/OpenSans-Bold.woff') forma
 	font-weight: 100;
 }
 
-@main-back: #2598d4;
+@main-back: rgb(15%, 60%, 83%, .5);;
 @main-blue: #0c9aec;
 @black: #1e2123;
 
 *{
 	margin: 0;
 	padding: 0;
+	z-index: 0;
 }
 
 html{
 	font-size: 62.5%;
 	font-family: 'Open Sans', serif;
-	background-color: @main-back; //временный фон
+	// background-color: @main-back; //временный фон
 }
 
 body{
@@ -72,6 +78,31 @@ a{
 	text-decoration: none;
 	color: inherit;
 }
+
+h1{
+	.openSansExtraB;
+	font-size: 4.1rem;
+	text-transform: uppercase;
+	margin: 0;
+	margin-left: 8rem;
+}
+
+hr{
+	width: 6rem;
+	height: 1rem;
+	border: none;
+	margin: 4rem 0;
+	margin-left: 8rem;
+}
+
+p{
+	.openSans;
+	font-size: 1.7rem;
+	line-height: 100%*(25px/17px);
+	padding: 1rem 0;
+}
+
+
 
 
 // Шапка сайта
@@ -88,10 +119,9 @@ header{
 		margin: 0;
 		.openSansLight;
 		font-size: 2.7rem;
-		text-transform: uppercase;
 
 		span{
-			.openSansBold;
+			.openSansExtraB;
 			font-weight: 900;
 		}
 	}
@@ -118,6 +148,193 @@ header{
 			&:last-child{
 				margin-right: 0;
 			}
+		}
+	}
+}
+
+// Слайдер
+
+.slider{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	min-height: 75rem;
+	overflow: hidden;
+	z-index: -1;
+	color: white;
+	background-color: @main-back;
+
+	&__img{
+		display: block;
+		position: absolute;
+	    width: 100%;
+	    min-height: inherit;
+	    background: url(../img/slider1.jpg) no-repeat;
+	    background-size: cover;
+	    opacity: 0.1;
+	}
+
+	&__text-block{
+		text-align: left;
+		max-width: 62.5%;
+		top: 40%;
+		left: 18.75%;
+		background-color: initial;
+
+		&__h1{
+
+		}
+
+		&__line{
+			background-color: white;
+		}
+
+		&__text{
+			.openSans;
+			display: inline;
+			margin: 0;
+			font-weight: 300;
+			font-size: 1.7rem;
+			padding: 0;
+		}
+	}
+
+	&__nav{
+		display: block;
+		transition: 1s;
+		top: 63rem;
+    	left: 18.75%;
+    	background-color: initial;
+
+		ol{
+			list-style-type: none;
+			text-transform: uppercase;
+			.openSansExtraB;
+			font-size: 1.6rem;
+
+			li{
+				display: inline-block;
+				border-spacing: .3rem;
+				border-style: solid;
+				border-color: white;
+				text-align: center;
+				padding: .2% 0;
+			}
+		}
+
+		&__prev,
+		&__next,
+		&__num{
+			transition: 1s;
+		}
+
+		&__prev:hover,
+		&__next:hover,
+		&__num:hover{
+			color: @black;
+			border-color: @black;
+		}
+
+		&__prev, &__next{
+			width: 5%;
+			height: 3.3rem;
+			box-sizing: border-box;
+		}
+
+		&__num, &__num--active{
+			width: 2.57%;
+			height: 3.3rem;
+			box-sizing: border-box;
+		}
+
+		&__num--active{
+			background: white;
+			color: @main-back;
+		}
+	}
+}
+
+// Блок услуг
+
+.services{
+	display: block;
+	width: 100%;
+	position: relative;
+    top: 62rem;
+
+	&__text-block{
+		text-align: left;
+		max-width: 62.5%;
+		top: 20rem;
+		left: 18.75%;
+		background-color: initial;
+		// margin-bottom: 12rem;
+
+		&__h1{
+
+		}
+
+		&__line{
+			background: @black;
+		}
+
+		&__text{
+			padding: 0;
+		}
+	}
+
+	&__content-block{
+		top: 34rem;
+
+		&:after{
+			content: " ";
+			display: block;
+			clear: both;
+		}
+
+		img{
+			float: left;
+			margin-left: -1rem;
+			margin-right: 5rem;
+			max-width: 50.8%;
+		}
+
+		h2{
+			.openSansExtraB;
+			font-size: 1.9rem;
+			text-transform: uppercase;
+			margin-bottom: 1.5rem;
+		}
+
+		&__text{
+			float: left;
+			max-width: 27.34%;
+			margin-top: 8rem;
+
+			.right {
+				float: right;
+			}
+		}
+	}
+
+	//Класс для выравнивания по правой стороне
+	.right {
+
+		h2{
+			text-align: right;
+		}
+
+		img{
+			float: right;
+			margin-right: -1rem;
+			margin-left: 5rem;
+		}
+
+		.services__content-block__text{
+			float: right;
 		}
 	}
 }

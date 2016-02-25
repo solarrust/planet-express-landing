@@ -31,6 +31,10 @@
   font-family: 'Open Sans Bold', Arial, serif;
   font-weight: 600;
 }
+.openSansExtraB {
+  font-family: 'Open Sans Bold', Arial, serif;
+  font-weight: 900;
+}
 .openSansItalic {
   font-family: 'Open Sans Italic', Arial, serif;
   font-weight: 300;
@@ -43,11 +47,11 @@
 * {
   margin: 0;
   padding: 0;
+  z-index: 0;
 }
 html {
   font-size: 62.5%;
   font-family: 'Open Sans', serif;
-  background-color: #2598d4;
 }
 body {
   padding: 1rem;
@@ -55,6 +59,28 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+h1 {
+  font-family: 'Open Sans Bold', Arial, serif;
+  font-weight: 900;
+  font-size: 4.1rem;
+  text-transform: uppercase;
+  margin: 0;
+  margin-left: 8rem;
+}
+hr {
+  width: 6rem;
+  height: 1rem;
+  border: none;
+  margin: 4rem 0;
+  margin-left: 8rem;
+}
+p {
+  font-family: 'Open Sans', Arial, serif;
+  font-weight: 300;
+  font-size: 1.7rem;
+  line-height: 147.05882353%;
+  padding: 1rem 0;
 }
 header {
   position: relative;
@@ -70,11 +96,9 @@ header h1 {
   font-family: 'Open Sans Light', Arial, serif;
   font-weight: 100;
   font-size: 2.7rem;
-  text-transform: uppercase;
 }
 header h1 span {
   font-family: 'Open Sans Bold', Arial, serif;
-  font-weight: 600;
   font-weight: 900;
 }
 header ul {
@@ -99,4 +123,152 @@ header ul li:active {
 }
 header ul li:last-child {
   margin-right: 0;
+}
+.slider {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 75rem;
+  overflow: hidden;
+  z-index: -1;
+  color: white;
+  background-color: #2699d4;
+}
+.slider__img {
+  display: block;
+  position: absolute;
+  width: 100%;
+  min-height: inherit;
+  background: url(../img/slider1.jpg) no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+}
+.slider__text-block {
+  text-align: left;
+  max-width: 62.5%;
+  top: 40%;
+  left: 18.75%;
+  background-color: initial;
+}
+.slider__text-block__line {
+  background-color: white;
+}
+.slider__text-block__text {
+  font-family: 'Open Sans', Arial, serif;
+  display: inline;
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.7rem;
+  padding: 0;
+}
+.slider__nav {
+  display: block;
+  transition: 1s;
+  top: 63rem;
+  left: 18.75%;
+  background-color: initial;
+}
+.slider__nav ol {
+  list-style-type: none;
+  text-transform: uppercase;
+  font-family: 'Open Sans Bold', Arial, serif;
+  font-weight: 900;
+  font-size: 1.6rem;
+}
+.slider__nav ol li {
+  display: inline-block;
+  border-spacing: .3rem;
+  border-style: solid;
+  border-color: white;
+  text-align: center;
+  padding: .2% 0;
+}
+.slider__nav__prev,
+.slider__nav__next,
+.slider__nav__num {
+  transition: 1s;
+}
+.slider__nav__prev:hover,
+.slider__nav__next:hover,
+.slider__nav__num:hover {
+  color: #1e2123;
+  border-color: #1e2123;
+}
+.slider__nav__prev,
+.slider__nav__next {
+  width: 5%;
+  height: 3.3rem;
+  box-sizing: border-box;
+}
+.slider__nav__num,
+.slider__nav__num--active {
+  width: 2.57%;
+  height: 3.3rem;
+  box-sizing: border-box;
+}
+.slider__nav__num--active {
+  background: white;
+  color: #2699d4;
+}
+.services {
+  display: block;
+  width: 100%;
+  position: relative;
+  top: 62rem;
+}
+.services__text-block {
+  text-align: left;
+  max-width: 62.5%;
+  top: 20rem;
+  left: 18.75%;
+  background-color: initial;
+}
+.services__text-block__line {
+  background: #1e2123;
+}
+.services__text-block__text {
+  padding: 0;
+}
+.services__content-block {
+  top: 34rem;
+}
+.services__content-block:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.services__content-block img {
+  float: left;
+  margin-left: -1rem;
+  margin-right: 5rem;
+  max-width: 50.8%;
+}
+.services__content-block h2 {
+  font-family: 'Open Sans Bold', Arial, serif;
+  font-weight: 900;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.services__content-block__text {
+  float: left;
+  max-width: 27.34%;
+  margin-top: 8rem;
+}
+.services__content-block__text .right {
+  float: right;
+}
+.services .right h2 {
+  text-align: right;
+}
+.services .right img {
+  float: right;
+  margin-right: -1rem;
+  margin-left: 5rem;
+}
+.services .right .services__content-block__text {
+  float: right;
 }
