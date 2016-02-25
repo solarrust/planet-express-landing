@@ -89,6 +89,7 @@ header {
   position: relative;
   padding: 3rem;
   color: white;
+  z-index: 3;
 }
 header h1 {
   display: inline-block;
@@ -136,9 +137,9 @@ header ul li:last-child {
   width: 100%;
   min-height: 75rem;
   overflow: hidden;
-  z-index: -1;
   color: white;
   background-color: #2699d4;
+  z-index: 2;
 }
 .slider__img {
   display: block;
