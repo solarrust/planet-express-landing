@@ -62,14 +62,14 @@ src: local('Open Sans Bold'), url('../fonts/open-sans/OpenSans-Bold.woff') forma
 	margin: 0;
 	padding: 0;
 	z-index: 0;
+	box-sizing: border-box;
 }
 
 html{
 	font-size: 62.5%;
 	font-family: 'Open Sans', serif;
 	// background-color: @main-back; //временный фон
-	max-width: 128rem;
-	box-sizing: border-box;
+	// max-width: 128rem;
 }
 
 body{
@@ -106,7 +106,7 @@ p{
 
 
 main{
-	height: 280rem+142rem+127rem+100rem;
+	height: 280rem+142rem+127rem+100rem+33rem;
 }
 
 
@@ -632,10 +632,6 @@ header{
 					transition: width .4s ease-in-out;
 					background-color: @main-blue;
 	        	}
-
-	        	&:hover{
-
-	        	}
         	}
 
         	h3{
@@ -657,6 +653,119 @@ header{
 	}
 }
 
+
+// Контакты
+
+.contact{
+	display: block;
+	width: 100%;
+	position: relative;
+    top: 138rem;
+
+    &__text-block{
+		text-align: left;
+		max-width: 62.5%;
+		top: 20rem;
+		left: 18.75%;
+		background-color: initial;
+
+		&__line{
+			background: @black;
+		}
+
+		&__text{
+			padding: 0;
+		}
+	}
+
+	&__adress-block{
+		top: 30rem;
+
+		&__map{
+			float: left;
+			margin-right: 4rem;
+			height: 80rem;
+		}
+
+		&__adress{
+
+			h2{
+				.openSansBold;
+				text-transform: uppercase;
+				font-size: 1.7rem;
+			}
+
+			p{
+				font-size: 1.7rem;
+				margin-top: 1.5rem
+			}
+		}
+
+		&__contacts{
+			margin: 4rem 0;
+
+			a{
+				color: @main-blue;
+			}
+		}
+
+		form{
+			display: block;
+			margin: 1.5rem 0;
+
+			label, input{
+				display: block;
+			}
+
+			label{
+				.openSansBold;
+				text-transform: uppercase;
+				font-size: 1.7rem;
+				margin-bottom: 1rem;
+			}
+
+			input, textarea{
+				width: 35.5rem;
+				height: 4.3rem;
+				border: 2px solid #e8e8e9;
+				.openSans;
+				font-size: 1.5rem;
+				color: @black;
+				padding: 1.5rem 2rem;
+				margin-bottom: 2rem;
+
+				&:active, &:focus{
+					border: 2px solid @black;
+					outline: none;
+				}
+			}
+
+			textarea{
+				height: 18rem;
+			}
+
+			input[type="submit"]{
+				background-color: inherit;
+				border: 3px solid @main-blue;
+				box-sizing: border-box;
+				text-transform: uppercase;
+				.openSansExtraB;
+				font-size: 1.5rem;
+				padding: .78%;
+				color: @main-blue;
+				transition: 1s;
+
+				&:hover,
+				&:focus,
+				&:active{
+					background-color: @main-blue;
+					color: white;
+				}
+			}
+		}
+	}
+	
+}
 
 // Футер
 
@@ -703,3 +812,4 @@ footer{
 		}
 	}
 }
+

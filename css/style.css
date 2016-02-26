@@ -48,12 +48,11 @@
   margin: 0;
   padding: 0;
   z-index: 0;
+  box-sizing: border-box;
 }
 html {
   font-size: 62.5%;
   font-family: 'Open Sans', serif;
-  max-width: 128rem;
-  box-sizing: border-box;
 }
 a {
   text-decoration: none;
@@ -82,7 +81,7 @@ p {
   padding: 1rem 0;
 }
 main {
-  height: 649rem;
+  height: 682rem;
 }
 header {
   position: relative;
@@ -536,6 +535,104 @@ header ul li:last-child {
   font-size: 1.3rem;
   text-transform: uppercase;
   margin-top: 2rem;
+}
+.contact {
+  display: block;
+  width: 100%;
+  position: relative;
+  top: 138rem;
+}
+.contact__text-block {
+  text-align: left;
+  max-width: 62.5%;
+  top: 20rem;
+  left: 18.75%;
+  background-color: initial;
+}
+.contact__text-block__line {
+  background: #1e2123;
+}
+.contact__text-block__text {
+  padding: 0;
+}
+.contact__adress-block {
+  top: 30rem;
+}
+.contact__adress-block__map {
+  float: left;
+  margin-right: 4rem;
+  height: 80rem;
+}
+.contact__adress-block__adress h2 {
+  font-family: 'Open Sans Bold', Arial, serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+}
+.contact__adress-block__adress p {
+  font-size: 1.7rem;
+  margin-top: 1.5rem;
+}
+.contact__adress-block__contacts {
+  margin: 4rem 0;
+}
+.contact__adress-block__contacts a {
+  color: #0c9aec;
+}
+.contact__adress-block form {
+  display: block;
+  margin: 1.5rem 0;
+}
+.contact__adress-block form label,
+.contact__adress-block form input {
+  display: block;
+}
+.contact__adress-block form label {
+  font-family: 'Open Sans Bold', Arial, serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+.contact__adress-block form input,
+.contact__adress-block form textarea {
+  width: 35.5rem;
+  height: 4.3rem;
+  border: 2px solid #e8e8e9;
+  font-family: 'Open Sans', Arial, serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #1e2123;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+.contact__adress-block form input:active,
+.contact__adress-block form textarea:active,
+.contact__adress-block form input:focus,
+.contact__adress-block form textarea:focus {
+  border: 2px solid #1e2123;
+  outline: none;
+}
+.contact__adress-block form textarea {
+  height: 18rem;
+}
+.contact__adress-block form input[type="submit"] {
+  background-color: inherit;
+  border: 3px solid #0c9aec;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: 'Open Sans Bold', Arial, serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  padding: .78%;
+  color: #0c9aec;
+  transition: 1s;
+}
+.contact__adress-block form input[type="submit"]:hover,
+.contact__adress-block form input[type="submit"]:focus,
+.contact__adress-block form input[type="submit"]:active {
+  background-color: #0c9aec;
+  color: white;
 }
 footer {
   display: block;
