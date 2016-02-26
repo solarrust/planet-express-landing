@@ -68,10 +68,12 @@ html{
 	font-size: 62.5%;
 	font-family: 'Open Sans', serif;
 	// background-color: @main-back; //временный фон
+	max-width: 128rem;
+	box-sizing: border-box;
 }
 
 body{
-	padding: 1rem;
+	// padding: 1rem;
 }
 
 a{
@@ -104,7 +106,7 @@ p{
 
 
 main{
-	height: 280rem+142rem;
+	height: 280rem+142rem+127rem+100rem;
 }
 
 
@@ -211,6 +213,7 @@ header{
 		transition: 1s;
 		top: 63rem;
     	left: 18.75%;
+    	min-height: 1rem;
     	background-color: initial;
 
 		ol{
@@ -350,6 +353,7 @@ header{
 	width: 100%;
 	position: relative;
     top: 89.2rem;
+    z-index: 2;
 
     &__text-block{
 		text-align: left;
@@ -412,8 +416,8 @@ header{
 
 		&__part{
 			display: block;
-			max-width: 50.756%;
-			height:33rem;
+			max-width: 50.75521%;
+			height:33.3rem;
 			top: 0;
 			background-color: @main-back;
 
@@ -496,6 +500,162 @@ header{
 	}
 }
 
+// Блок "О нас"
+
+.about{
+	display: block;
+	width: 100%;
+	position: relative;
+    top: 113rem;
+
+    &__text-block{
+		text-align: left;
+		max-width: 62.5%;
+		top: 20rem;
+		left: 18.75%;
+		background-color: initial;
+
+		&__line{
+			background: @black;
+		}
+
+		&__text{
+			padding: 0;
+		}
+	}
+
+	&__content-block{
+		top: 30rem;
+		overflow: hidden;
+
+		ul{
+			display: inline-block;
+			max-width: 31rem;
+			list-style-type: none;
+			.openSansExtraB;
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			color: @main-blue;
+			margin: 3.5rem 0;
+
+			li{
+				display: inline-block;
+				border-spacing: .3rem;
+				border-style: solid;
+				border-color: @main-blue;
+				text-align: center;
+				padding: .78%;
+				margin-right: 1rem;
+				margin-bottom: .5rem;
+				transition: 1s;
+
+				&:hover{
+					background-color: @main-blue;
+					color: white;
+				}
+			}
+		}
+
+	    img{
+	    	float: left;
+	    	margin-left: -1rem;
+	    	margin-right: 5rem;
+	    	margin-bottom: 2rem;
+	    }
+
+	    h1{
+	    	display: inline-block;
+	    	max-width: 36rem;
+	    	font-size: 3.3rem;
+	    	.openSans;
+	    	vertical-align: top;
+	    	margin-left: 0;
+
+	    	span{
+	    		.openSansExtraB;
+	    	}
+	    }
+
+    	p{
+			padding: 1rem 24rem;
+	    }
+
+	    &__skills{
+	    	display: block;
+	    	float: right;
+	    	width: 64rem;
+	    	margin-left: 4.5rem;
+
+	    	i{
+	    		display: inline-block;
+	    		position: relative;
+	    		.openSansBold;
+	    		font-size: 1.1rem;
+	    		font-style: normal;
+	    		color: white;
+	    		background-color: @black;
+	    		padding: .5rem 1rem;
+	    		margin-bottom: 0;
+
+	    		&:first-of-type{
+	    			left: 44.7rem;
+	    		}
+
+	    		&:nth-of-type(2){
+	    			left: 26.2rem;
+	    		}
+
+	    		&:nth-of-type(3){
+	    			left: 44.9rem;
+	    		}
+
+	    		&:last-of-type{
+	    			left: 18.6rem;
+	    		}
+	    	}
+
+	    	&__progress {
+	            background-color: #eee;
+	            height: 1rem;
+	            padding: 0;
+	            width: 100%;
+	            margin-bottom: 1rem;
+	            box-sizing: border-box;
+
+				span {
+		            display: inline-block;
+		            height: 100%;
+					-webkit-transition: width .4s ease-in-out;
+					-moz-transition: width .4s ease-in-out;
+					-ms-transition: width .4s ease-in-out;
+					-o-transition: width .4s ease-in-out;
+					transition: width .4s ease-in-out;
+					background-color: @main-blue;
+	        	}
+
+	        	&:hover{
+
+	        	}
+        	}
+
+        	h3{
+				.openSansBold;
+				font-size: 1.5rem;
+				text-transform: uppercase;
+				margin-bottom: 2rem;
+        	}
+
+        	h4{
+        		display: inline-block;
+        		.openSans;
+        		font-size: 1.3rem;
+        		text-transform: uppercase;
+        		margin-top: 2rem;
+        	}
+
+	    }
+	}
+}
 
 
 // Футер
