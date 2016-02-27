@@ -68,12 +68,6 @@ src: local('Open Sans Bold'), url('../fonts/open-sans/OpenSans-Bold.woff') forma
 html{
 	font-size: 62.5%;
 	font-family: 'Open Sans', serif;
-	// background-color: @main-back; //временный фон
-	// max-width: 128rem;
-}
-
-body{
-	// padding: 1rem;
 }
 
 a{
@@ -104,18 +98,13 @@ p{
 	padding: 1rem 0;
 }
 
-
-main{
-	height: 280rem+142rem+127rem+100rem+33rem;
-}
-
-
 // Шапка сайта
 header{
-	position: relative;
+	position: absolute;
 	padding: 3rem;
 	color: white;
 	z-index: 3;
+	width: 100%;
 
 	h1{
 		display: inline-block;
@@ -162,7 +151,7 @@ header{
 
 .slider{
 	display: block;
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -184,10 +173,11 @@ header{
 	}
 
 	&__text-block{
+		position: absolute;
 		text-align: left;
-		max-width: 62.5%;
+		width: 62.5%;
 		top: 40%;
-		left: 18.75%;
+		left: 33rem/1.28rem;
 		background-color: initial;
 
 		&__h1{
@@ -211,10 +201,11 @@ header{
 	&__nav{
 		display: block;
 		transition: 1s;
-		top: 63rem;
-    	left: 18.75%;
+		top: 66rem;
+    	left: 25.78125rem;
     	min-height: 1rem;
     	background-color: initial;
+    	margin-left: 8rem;
 
 		ol{
 			list-style-type: none;
@@ -269,16 +260,14 @@ header{
 .services{
 	display: block;
 	width: 100%;
+	margin-top: 20rem;
 	position: relative;
-    top: 62rem;
 
 	&__text-block{
 		text-align: left;
 		max-width: 62.5%;
-		top: 20rem;
 		left: 18.75%;
-		background-color: initial;
-		// margin-bottom: 12rem;
+		margin-bottom: 10rem;
 
 		&__h1{
 
@@ -294,7 +283,6 @@ header{
 	}
 
 	&__content-block{
-		top: 34rem;
 
 		&:after{
 			content: " ";
@@ -304,9 +292,8 @@ header{
 
 		img{
 			float: left;
-			margin-left: -1rem;
 			margin-right: 5rem;
-			max-width: 50.8%;
+			max-width: 50%;
 		}
 
 		h2{
@@ -336,7 +323,7 @@ header{
 
 		img{
 			float: right;
-			margin-right: -1rem;
+			margin-right: 0;
 			margin-left: 5rem;
 		}
 
@@ -351,17 +338,14 @@ header{
 .gallery{
 	display: block;
 	width: 100%;
+	margin-top: 20rem;
 	position: relative;
-    top: 89.2rem;
-    z-index: 2;
 
     &__text-block{
-		text-align: left;
-		max-width: 62.5%;
-		top: 20rem;
 		left: 18.75%;
-		background-color: initial;
-		// margin-bottom: 12rem;
+	    max-width: 62.5%;
+	    margin-bottom: 10rem;
+	    text-align: left;
 
 		&__h1{
 
@@ -410,19 +394,23 @@ header{
 		}
 	}
 	&__preview-block{
-		top: 29rem;
 		color: white;
 		text-align: center;
+		overflow: hidden;
+		margin-top: 0;
 
 		&__part{
-			display: block;
-			max-width: 50.75521%;
-			height:33.3rem;
+			display: inline-block;
+			position: relative;
+			max-width: 50%;
+			height:33rem;
 			top: 0;
 			background-color: @main-back;
 
 			img{
 				position: relative;
+				width: 100%;
+				height: 100%;
 				transition: 1s;
 			}
 
@@ -490,12 +478,10 @@ header{
 
 		&__part:nth-child(odd){
 			float: left;
-			margin-left: -1rem;
 		}
 
 		&__part:nth-child(even){
 			float: right;
-			margin-right: -1rem;
 		}
 	}
 }
@@ -505,15 +491,14 @@ header{
 .about{
 	display: block;
 	width: 100%;
+	margin-top: 20rem;
 	position: relative;
-    top: 113rem;
 
     &__text-block{
-		text-align: left;
-		max-width: 62.5%;
-		top: 20rem;
 		left: 18.75%;
-		background-color: initial;
+	    max-width: 62.5%;
+	    margin-bottom: 10rem;
+	    text-align: left;
 
 		&__line{
 			background: @black;
@@ -525,7 +510,6 @@ header{
 	}
 
 	&__content-block{
-		top: 30rem;
 		overflow: hidden;
 
 		ul{
@@ -558,7 +542,6 @@ header{
 
 	    img{
 	    	float: left;
-	    	margin-left: -1rem;
 	    	margin-right: 5rem;
 	    	margin-bottom: 2rem;
 	    }
@@ -659,15 +642,14 @@ header{
 .contact{
 	display: block;
 	width: 100%;
+	margin-top: 20rem;
 	position: relative;
-    top: 138rem;
 
     &__text-block{
-		text-align: left;
-		max-width: 62.5%;
-		top: 20rem;
 		left: 18.75%;
-		background-color: initial;
+	    max-width: 62.5%;
+	    margin-bottom: 10rem;
+	    text-align: left;
 
 		&__line{
 			background: @black;
@@ -679,7 +661,6 @@ header{
 	}
 
 	&__adress-block{
-		top: 30rem;
 
 		&__map{
 			float: left;
@@ -733,6 +714,7 @@ header{
 				color: @black;
 				padding: 1.5rem 2rem;
 				margin-bottom: 2rem;
+				transition: 1s;
 
 				&:active, &:focus{
 					border: 2px solid @black;
@@ -764,7 +746,6 @@ header{
 			}
 		}
 	}
-	
 }
 
 // Футер
@@ -775,6 +756,7 @@ footer{
 	text-align: right;
 	padding: 0 2.343%;
 	box-sizing: border-box;
+	margin-top: 23rem;
 
 	ul{
 		display: block;
