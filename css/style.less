@@ -238,13 +238,13 @@ header{
 
 		&__prev, &__next{
 			width: 5%;
-			height: 3.3rem;
+			height: 100%;
 			box-sizing: border-box;
 		}
 
 		&__num, &__num--active{
 			width: 2.57%;
-			height: 3.3rem;
+			height: 100%;
 			box-sizing: border-box;
 		}
 
@@ -283,6 +283,7 @@ header{
 	}
 
 	&__content-block{
+		width: 100%;
 
 		&:after{
 			content: " ";
@@ -293,7 +294,7 @@ header{
 		img{
 			float: left;
 			margin-right: 5rem;
-			max-width: 50%;
+			width: 50%;
 		}
 
 		h2{
@@ -304,7 +305,7 @@ header{
 		}
 
 		&__text{
-			float: left;
+			display: inline-block;
 			max-width: 27.34%;
 			margin-top: 8rem;
 
@@ -398,21 +399,20 @@ header{
 		text-align: center;
 		overflow: hidden;
 		margin-top: 0;
+		width: 100%;
 
 		&__part{
 			display: inline-block;
 			position: relative;
-			max-width: 50%;
-			height:33rem;
-			top: 0;
+			width: 50%;
+			min-height: 25.78%;
 			background-color: @main-back;
 
 			img{
-				position: relative;
 				width: 100%;
 				height: 100%;
 				transition: 1s;
-			}
+				vertical-align: top;			}
 
 			h2{
 				display: none;
@@ -462,7 +462,7 @@ header{
 					bottom: 7rem;
 					left: 50%;
 					margin-left: -5.6rem;
-					max-width: 11.2rem;
+					min-width: 11.2rem;
 					min-height: 3.4rem;
 					.openSansExtraB;
 					font-size: 1.5rem;
@@ -514,7 +514,7 @@ header{
 
 		ul{
 			display: inline-block;
-			max-width: 31rem;
+			width: 40%;
 			list-style-type: none;
 			.openSansExtraB;
 			font-size: 1.5rem;
@@ -544,11 +544,11 @@ header{
 	    	float: left;
 	    	margin-right: 5rem;
 	    	margin-bottom: 2rem;
+	    	max-width: 50%;
 	    }
 
 	    h1{
-	    	display: inline-block;
-	    	max-width: 36rem;
+	    	display: inline;
 	    	font-size: 3.3rem;
 	    	.openSans;
 	    	vertical-align: top;
@@ -666,6 +666,7 @@ header{
 			float: left;
 			margin-right: 4rem;
 			height: 80rem;
+			width: 50%;
 		}
 
 		&__adress{
@@ -706,7 +707,7 @@ header{
 			}
 
 			input, textarea{
-				width: 35.5rem;
+				width: 27.7%;
 				height: 4.3rem;
 				border: 2px solid #e8e8e9;
 				.openSans;
@@ -736,6 +737,7 @@ header{
 				padding: .78%;
 				color: @main-blue;
 				transition: 1s;
+				height: 100%;
 
 				&:hover,
 				&:focus,
