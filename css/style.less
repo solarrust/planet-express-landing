@@ -138,10 +138,54 @@ header{
 
 			&:hover, &:active{
 				color: @black;
+				transition: 1s;
+
+				ul{
+					display: block;
+					width: 18rem;
+					box-sizing: border-box;
+    				top: 0;
+    				background-color: @black;
+    				padding: 1rem .5rem;
+    				margin-top: 3rem;
+
+    				&:before{
+    					content: " ";
+    					width: 0;
+						height: 0;
+						border-right: 1rem solid transparent;
+					    border-bottom: 1rem solid @black;
+					    border-left: 1rem solid transparent;
+					    position: absolute;
+					    top: -1rem;
+					    right: 7.5rem;
+    				}
+
+					li{
+						display: block;
+						color: white;
+						width: 100%;
+						height: auto;
+						padding: 1rem 2rem;
+						box-sizing: border-box;
+						margin: 0;
+						font-size: 1.1rem;
+						.openSansExtraB;
+
+						&:hover{
+							background-color: white;
+							color: @black;
+						}
+					}
+				}
 			}
 
 			&:last-child{
 				margin-right: 0;
+			}
+
+			ul{
+				display: none;
 			}
 		}
 	}

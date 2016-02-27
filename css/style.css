@@ -162,11 +162,71 @@ header ul li
 header ul li:hover,
 header ul li:active
 {
+    -webkit-transition: 1s;
+            transition: 1s;
+
     color: #1e2123;
+}
+header ul li:hover ul,
+header ul li:active ul
+{
+    top: 0;
+
+    display: block;
+
+    box-sizing: border-box;
+    width: 18rem;
+    margin-top: 3rem;
+    padding: 1rem .5rem;
+
+    background-color: #1e2123;
+}
+header ul li:hover ul:before,
+header ul li:active ul:before
+{
+    position: absolute;
+    top: -1rem;
+    right: 7.5rem;
+
+    width: 0;
+    height: 0;
+
+    content: ' ';
+
+    border-right: 1rem solid transparent;
+    border-bottom: 1rem solid #1e2123;
+    border-left: 1rem solid transparent;
+}
+header ul li:hover ul li,
+header ul li:active ul li
+{
+    font-family: 'Open Sans Bold', Arial, serif;
+    font-size: 1.1rem;
+    font-weight: 900;
+
+    display: block;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 1rem 2rem;
+
+    color: white;
+}
+header ul li:hover ul li:hover,
+header ul li:active ul li:hover
+{
+    color: #1e2123;
+    background-color: white;
 }
 header ul li:last-child
 {
     margin-right: 0;
+}
+header ul li ul
+{
+    display: none;
 }
 .slider
 {
