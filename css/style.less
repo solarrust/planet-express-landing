@@ -352,7 +352,7 @@ header{
 		&__text{
 			display: inline-block;
 			max-width: 27.34%;
-			margin-top: 8rem;
+			margin-top: 6.25%;
 
 			.right {
 				float: right;
@@ -611,7 +611,7 @@ header{
 	    &__skills{
 	    	display: block;
 	    	float: right;
-	    	width: 64rem;
+	    	width: 50%;
 	    	margin-left: 4.5rem;
 
 	    	i{
@@ -842,3 +842,68 @@ footer{
 	}
 }
 
+
+@media screen and (max-width:1024px){
+	.services__content-block__text{
+		max-width: 44%;
+	}
+
+	.gallery__preview-block__part{
+
+		&:hover{
+
+			h2{
+				top: 4.5rem;
+			}
+
+			p{
+				top:10rem;
+			}
+
+			a{
+				bottom: 4rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width:860px){
+
+	p{
+		font-size: 1.4rem;
+		padding: 0 1rem;
+	}
+
+	.slider__nav{
+
+		&__prev,
+		&__next{
+			width: 6%;
+		}
+
+		&__num,
+		&__num--active{
+			width: 3.57%;
+		}
+	}
+
+	.gallery__preview-block__part{
+
+		&:hover{
+
+			h2{
+				font-size: 1.6rem;
+			}
+
+			p{
+				font-size: 1.3rem;
+				margin-left: -21rem;
+			}
+
+			a{
+				font-size: 1.3rem;
+				bottom: 2rem;
+			}
+		}
+	}
+}
