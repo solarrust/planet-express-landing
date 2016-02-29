@@ -31,32 +31,6 @@
 
     src: local('Open Sans Bold'), url('../fonts/open-sans/OpenSans-Bold.woff') format('woff');
 }
-.openSans
-{
-    font-family: 'Open Sans', Arial, serif;
-    font-weight: 300;
-}
-.openSansBold
-{
-    font-family: 'Open Sans Bold', Arial, serif;
-    font-weight: 600;
-}
-.openSansExtraB
-{
-    font-family: 'Open Sans Bold', Arial, serif;
-    font-weight: 900;
-}
-.openSansItalic
-{
-    font-family: 'Open Sans Italic', Arial, serif;
-    font-weight: 300;
-    font-style: italic;
-}
-.openSansLight
-{
-    font-family: 'Open Sans Light', Arial, serif;
-    font-weight: 100;
-}
 *
 {
     z-index: 0;
